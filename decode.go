@@ -43,7 +43,7 @@ type Primitive struct {
 	context   Key
 }
 
-// DEPRECATED!
+// PrimitiveDecode: DEPRECATED!
 //
 // Use MetaData.PrimitiveDecode instead.
 func PrimitiveDecode(primValue Primitive, v interface{}) error {

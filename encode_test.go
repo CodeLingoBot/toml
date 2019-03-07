@@ -56,7 +56,7 @@ func TestEncodeRoundTrip(t *testing.T) {
 	}
 }
 
-// XXX(burntsushi)
+// TestEncode: XXX(burntsushi)
 // I think these tests probably should be removed. They are good, but they
 // ought to be obsolete by toml-test.
 func TestEncode(t *testing.T) {

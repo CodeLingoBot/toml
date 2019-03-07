@@ -248,7 +248,7 @@ func extractNestedKeys(v map[string]interface{}) []string {
 	}
 }
 
-// Case insensitive matching tests.
+// TestCase: Case insensitive matching tests.
 // A bit more comprehensive than needed given the current implementation,
 // but implementations change.
 // Probably still missing demonstrations of some ugly corner cases regarding
@@ -951,7 +951,7 @@ func TestDecodeErrors(t *testing.T) {
 	}
 }
 
-// Test for https://github.com/BurntSushi/toml/pull/166.
+// TestDecodeBoolArray tests for https://github.com/BurntSushi/toml/pull/166.
 func TestDecodeBoolArray(t *testing.T) {
 	for _, tt := range []struct {
 		s    string
@@ -1100,7 +1100,7 @@ func (d *duration) UnmarshalText(text []byte) error {
 	return err
 }
 
-// Example Unmarshaler shows how to decode TOML strings into your own
+// Example_unmarshaler: Example Unmarshaler shows how to decode TOML strings into your own
 // custom data type.
 func Example_unmarshaler() {
 	blob := `
@@ -1144,7 +1144,7 @@ duration = "8m03s"
 	// Stairway to Heaven (8m3s)
 }
 
-// Example StrictDecoding shows how to detect whether there are keys in the
+// Example_strictDecoding: Example StrictDecoding shows how to detect whether there are keys in the
 // TOML document that weren't decoded into the value given. This is useful
 // for returning an error to the user if they've included extraneous fields
 // in their configuration.
@@ -1169,7 +1169,7 @@ key3 = "value3"
 	// Undecoded keys: ["key2"]
 }
 
-// Example UnmarshalTOML shows how to implement a struct type that knows how to
+// Example_unmarshalTOML: Example UnmarshalTOML shows how to implement a struct type that knows how to
 // unmarshal itself. The struct must take full responsibility for mapping the
 // values passed into the struct. The method may be used with interfaces in a
 // struct in cases where the actual type is not known until the data is
